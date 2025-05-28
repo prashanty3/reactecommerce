@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:18'
+            args '-p 3000:80'
+        }
+    }
 
     environment {
         REACT_APP_NAME = 'my-react-app'
