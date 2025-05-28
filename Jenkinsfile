@@ -3,7 +3,6 @@ pipeline {
         docker {
             image 'node:24'
             args '-p 3000:80 -v /var/run/docker.sock:/var/run/docker.sock'
-            label 'docker'
         }
     }
     environment {
