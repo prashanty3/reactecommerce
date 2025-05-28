@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'github', url: 'https://github.com/prashanty3/reactecommerce.git'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/prashanty3/reactecommerce.git'
             }
         }
 
