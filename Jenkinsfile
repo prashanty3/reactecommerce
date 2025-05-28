@@ -1,11 +1,11 @@
 pipeline {
-    agent {
+    agent{
         docker {
-            image 'node:18'
-            args '-p 3000:80'
+            image 'node:24'
+            args '-p 3000:80 -v /var/run/docker.sock:/var/run/docker.sock'
+            label 'docker'
         }
     }
-
     environment {
         REACT_APP_NAME = 'my-react-app'
     }
